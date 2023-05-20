@@ -18,10 +18,7 @@ workflows:
     publishing:
       email:
         recipients:
-          - arashmohmdi79@gmail.com          
-      slack:
-        channel: '#QA report'
-        notify_on_build_start: true
+          - arashmohmdi79@gmail.com
 
       scripts:
         - name: Install dependencies
@@ -30,16 +27,6 @@ workflows:
         - name: Build APK
           script: flutter build apk
 
-        # - name: Send APK to Email
-        #   script: |
-        #     # Replace `arashmohmdi79@gmail.com` with the email address you want to send the APK to
-        #     curl -s --url "smtps://smtp.example.com:465" \
-        #       --ssl-reqd \
-        #       --mail-from "arashmohmdi79@gmail.com" \
-        #       --mail-rcpt "arashmohmdi79@gmail.com" \
-        #       --upload-file "./build/app/outputs/flutter-apk/app-release.apk" \
-        #       --user "arashmohmdi79@gmail.com:Arashioi9" \
-        #       --insecure
 
     artifacts:
       - build/app/outputs/flutter-apk/app-release.apk
