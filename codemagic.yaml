@@ -7,9 +7,6 @@ workflows:
     max_build_duration: 60
     environment:
       flutter: stable
-    cache:
-      cache_paths:
-        - ~/.pub-cache
     triggering:
       events:
         - push
@@ -18,8 +15,6 @@ workflows:
           include: true
           source: true
       cancel_previous_builds: false
-    scripts:
-      - ...
     publishing:
       email:
         recipients:
