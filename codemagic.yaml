@@ -18,8 +18,7 @@ workflows:
     publishing:
       email:
         recipients:
-          - arashmohmdi79@gmail.com
-          
+          - arashmohmdi79@gmail.com          
       slack:
         channel: '#QA report'
         notify_on_build_start: true
