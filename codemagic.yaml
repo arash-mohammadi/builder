@@ -28,4 +28,7 @@ workflows:
         recipients:
           - arashmohmdi79@gmail.com
       scripts:
-        - echo 'Post-publish script'
+        - name: Install dependencies
+          script: flutter pub get
+        - name: Build APK
+          script: flutter build apk
