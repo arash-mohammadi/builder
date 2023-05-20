@@ -10,15 +10,20 @@ workflows:
     triggering:
       events:
         - push
-      branch_patterns:
-        - pattern: '*'
-          include: true
-          source: true
-      cancel_previous_builds: false
+      branch_patterns: 
+        - pattern: main
+        - pattern: develop
+          include: false
+      cancel_previous_builds: true
     publishing:
       email:
         recipients:
           - arashmohmdi79@gmail.com
+          
+      slack:
+        channel: '#QA report'
+        notify_on_build_start: true
+
       scripts:
         - name: Install dependencies
           script: flutter pub get
