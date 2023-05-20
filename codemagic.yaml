@@ -3,7 +3,7 @@ workflows:
     name: My workflow name
     labels:
       - QA
-    instance_type: windows_x2
+    instance_type: mac_mini_m1
     max_build_duration: 60
     environment:
       flutter: stable
